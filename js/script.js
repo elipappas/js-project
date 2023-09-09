@@ -1,9 +1,10 @@
 const wordText = document.querySelector(".word"),
-hintText = document.querySelector(".hint span"),
-timeText = document.querySelector(".time b"),
+// hintText = document.querySelector(".hint span"),
+timeText = document.querySelector(".container h2"),
 inputField = document.querySelector("input"),
 refreshBtn = document.querySelector(".refresh-word"),
-checkBtn = document.querySelector(".check-word");
+checkBtn = document.querySelector(".check-word"),
+// changeTextBtn = document.querySelector(".hint");
 contentBox = document.querySelector(".container .content");
 startArea = document.querySelector(".startArea");
 scoreArea = document.querySelector(".score");
@@ -20,6 +21,7 @@ var modalText = document.getElementById("modalText");
 
 let correctWord, timer;
 let score = 0; 
+let displayed = 0;
 
 
 
@@ -79,7 +81,7 @@ const initGame = () => {
     }
     
     wordText.innerText = wordArray.join("");
-    hintText.innerText = randomObj.hint;
+    // Text.innerText = randomObj.hint;
     correctWord = randomObj.word.toLowerCase();;
     inputField.value = "";
     inputField.setAttribute("maxlength", correctWord.length);
@@ -93,6 +95,22 @@ const initGame = () => {
 }
 
 
+/* changeTextBtn.addEventListener("click", function(){
+    hintButton();
+})
+
+const hintButton = () => {
+    if(displayed === 0){
+        var T = document.getElementById("hintSpan");
+        T.style.display="block";
+        displayed = 1;
+    }
+    else{
+        var T = document.getElementById("hintSpan");
+        T.style.display="none";
+        displayed = 0;
+    }  
+} */
 
 const checkWord = () => {
     let userWord = inputField.value.toLowerCase();
@@ -120,6 +138,7 @@ const checkWord = () => {
     modalContent.classList.add("modal-correct");
     modalText.innerHTML = `<br>Congrats! <b>${correctWord.toUpperCase()}</b> is the correct word`;
     score++;
+    //hintButton()
     }
   
     initGame();

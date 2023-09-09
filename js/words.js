@@ -1,94 +1,125 @@
-let words = [
-    {
-        word: "addition",
-        hint: "The process of adding numbers"
-    },
-    {
-        word: "meeting",
-        hint: "Event in which people come together"
-    },
-    {
-        word: "number",
-        hint: "Math symbol used for counting"
-    },
-    {
-        word: "exchange",
-        hint: "The act of trading"
-    },
-    {
-        word: "canvas",
-        hint: "Piece of fabric for oil painting"
-    },
-    {
-        word: "garden",
-        hint: "Space for planting flower and plant"
-    },
-    {
-        word: "position",
-        hint: "Location of someone or something"
-    },
-    {
-        word: "feather",
-        hint: "Hair like outer covering of bird"
-    },
-    {
-        word: "comfort",
-        hint: "A pleasant feeling of relaxation"
-    },
-    {
-        word: "tongue",
-        hint: "The muscular organ of mouth"
-    },
-    {
-        word: "expansion",
-        hint: "The process of increase or grow"
-    },
-    {
-        word: "country",
-        hint: "A politically identified region"
-    },
-    {
-        word: "group",
-        hint: "A number of objects or persons"
-    },
-    {
-        word: "taste",
-        hint: "Ability of tongue to detect flavour"
-    },
-    {
-        word: "store",
-        hint: "Large shop where goods are traded"
-    },
-    {
-        word: "field",
-        hint: "Area of land for farming activities"
-    },
-    {
-        word: "friend",
-        hint: "Person other than a family member"
-    },
-    {
-        word: "pocket",
-        hint: "A bag for carrying small items"
-    },
-    {
-        word: "needle",
-        hint: "A thin and sharp metal pin"
-    },
-    {
-        word: "expert",
-        hint: "Person with extensive knowledge"
-    },
-    {
-        word: "statement",
-        hint: "A declaration of something"
-    },
-    {
-        word: "second",
-        hint: "One-sixtieth of a minute"
-    },
-    {
-        word: "library",
-        hint: "Place containing collection of books"
-    },
-]
+let words = [{"word":"ability"},
+{"word":"absence"},{"word":"academy"},{"word":"account"},{"word":"accused"},
+{"word":"achieve"},{"word":"acquire"},{"word":"address"},{"word":"advance"},
+{"word":"adverse"},{"word":"advised"},{"word":"adviser"},{"word":"against"},
+{"word":"airline"},{"word":"airport"},{"word":"alcohol"},{"word":"alleged"},
+{"word":"already"},{"word":"analyst"},{"word":"ancient"},{"word":"another"},
+{"word":"anxiety"},{"word":"anxious"},{"word":"anybody"},{"word":"applied"},
+{"word":"arrange"},{"word":"arrival"},{"word":"article"},{"word":"assault"},
+{"word":"assumed"},{"word":"assured"},{"word":"attempt"},{"word":"attract"},
+{"word":"auction"},{"word":"average"},{"word":"backing"},{"word":"balance"},
+{"word":"banking"},{"word":"barrier"},{"word":"battery"},{"word":"bearing"},
+{"word":"beating"},{"word":"because"},{"word":"bedroom"},{"word":"believe"},
+{"word":"beneath"},{"word":"benefit"},{"word":"besides"},{"word":"between"},
+{"word":"billion"},{"word":"binding"},{"word":"brother"},{"word":"brought"},
+{"word":"burning"},{"word":"cabinet"},{"word":"caliber"},{"word":"calling"},
+{"word":"capable"},{"word":"capital"},{"word":"captain"},{"word":"caption"},
+{"word":"capture"},{"word":"careful"},{"word":"carrier"},{"word":"caution"},
+{"word":"ceiling"},{"word":"central"},{"word":"centric"},{"word":"century"},
+{"word":"certain"},{"word":"chamber"},{"word":"channel"},{"word":"chapter"},
+{"word":"charity"},{"word":"charlie"},{"word":"charter"},{"word":"checked"},
+{"word":"chicken"},{"word":"chronic"},{"word":"circuit"},{"word":"classes"},
+{"word":"classic"},{"word":"climate"},{"word":"closing"},{"word":"closure"},
+{"word":"clothes"},{"word":"collect"},{"word":"college"},{"word":"combine"},
+{"word":"comfort"},{"word":"command"},{"word":"comment"},{"word":"compact"},
+{"word":"company"},{"word":"compare"},{"word":"compete"},{"word":"complex"},
+{"word":"concept"},{"word":"concern"},{"word":"concert"},{"word":"conduct"},
+{"word":"confirm"},{"word":"connect"},{"word":"consent"},{"word":"consist"},
+{"word":"contact"},{"word":"contain"},{"word":"content"},{"word":"contest"},
+{"word":"context"},{"word":"control"},{"word":"convert"},{"word":"correct"},
+{"word":"council"},{"word":"counsel"},{"word":"counter"},{"word":"country"},
+{"word":"crucial"},{"word":"crystal"},{"word":"culture"},{"word":"current"},
+{"word":"cutting"},{"word":"dealing"},{"word":"decided"},{"word":"decline"},
+{"word":"default"},{"word":"defence"},{"word":"deficit"},{"word":"deliver"},
+{"word":"density"},{"word":"deposit"},{"word":"desktop"},{"word":"despite"},
+{"word":"destroy"},{"word":"develop"},{"word":"devoted"},{"word":"diamond"},
+{"word":"digital"},{"word":"discuss"},{"word":"disease"},{"word":"display"},
+{"word":"dispute"},{"word":"distant"},{"word":"diverse"},{"word":"divided"},
+{"word":"drawing"},{"word":"driving"},{"word":"dynamic"},{"word":"eastern"},
+{"word":"economy"},{"word":"edition"},{"word":"elderly"},{"word":"element"},
+{"word":"engaged"},{"word":"enhance"},{"word":"essence"},{"word":"evening"},
+{"word":"evident"},{"word":"exactly"},{"word":"examine"},{"word":"example"},
+{"word":"excited"},{"word":"exclude"},{"word":"exhibit"},{"word":"expense"},
+{"word":"explain"},{"word":"explore"},{"word":"express"},{"word":"extreme"},
+{"word":"factory"},{"word":"faculty"},{"word":"failing"},{"word":"failure"},
+{"word":"fashion"},{"word":"feature"},{"word":"federal"},{"word":"feeling"},
+{"word":"fiction"},{"word":"fifteen"},{"word":"filling"},{"word":"finance"},
+{"word":"finding"},{"word":"fishing"},{"word":"fitness"},{"word":"foreign"},
+{"word":"forever"},{"word":"formula"},{"word":"fortune"},{"word":"forward"},
+{"word":"founder"},{"word":"freedom"},{"word":"further"},{"word":"gallery"},
+{"word":"gateway"},{"word":"general"},{"word":"genetic"},{"word":"genuine"},
+{"word":"gigabit"},{"word":"greater"},{"word":"hanging"},{"word":"heading"},
+{"word":"healthy"},{"word":"hearing"},{"word":"heavily"},{"word":"helpful"},
+{"word":"helping"},{"word":"herself"},{"word":"highway"},{"word":"himself"},
+{"word":"history"},{"word":"holding"},{"word":"holiday"},{"word":"housing"},
+{"word":"however"},{"word":"hundred"},{"word":"husband"},{"word":"illegal"},
+{"word":"illness"},{"word":"imagine"},{"word":"imaging"},{"word":"improve"},
+{"word":"include"},{"word":"initial"},{"word":"inquiry"},{"word":"insight"},
+{"word":"install"},{"word":"instant"},{"word":"instead"},{"word":"intense"},
+{"word":"interim"},{"word":"involve"},{"word":"jointly"},{"word":"journal"},
+{"word":"journey"},{"word":"justice"},{"word":"justify"},{"word":"keeping"},
+{"word":"killing"},{"word":"kingdom"},{"word":"kitchen"},{"word":"knowing"},
+{"word":"landing"},{"word":"largely"},{"word":"lasting"},{"word":"leading"},
+{"word":"learned"},{"word":"leisure"},{"word":"liberal"},{"word":"liberty"},
+{"word":"library"},{"word":"license"},{"word":"limited"},{"word":"listing"},
+{"word":"logical"},{"word":"loyalty"},{"word":"machine"},{"word":"manager"},
+{"word":"married"},{"word":"massive"},{"word":"maximum"},{"word":"meaning"},
+{"word":"measure"},{"word":"medical"},{"word":"meeting"},{"word":"mention"},
+{"word":"message"},{"word":"million"},{"word":"mineral"},{"word":"minimal"},
+{"word":"minimum"},{"word":"missing"},{"word":"mission"},{"word":"mistake"},
+{"word":"mixture"},{"word":"monitor"},{"word":"monthly"},{"word":"morning"},
+{"word":"musical"},{"word":"mystery"},{"word":"natural"},{"word":"neither"},
+{"word":"nervous"},{"word":"network"},{"word":"neutral"},{"word":"notable"},
+{"word":"nothing"},{"word":"nowhere"},{"word":"nuclear"},{"word":"nursing"},
+{"word":"obvious"},{"word":"offense"},{"word":"officer"},{"word":"ongoing"},
+{"word":"opening"},{"word":"operate"},{"word":"opinion"},{"word":"optical"},
+{"word":"organic"},{"word":"outcome"},{"word":"outdoor"},{"word":"outlook"},
+{"word":"outside"},{"word":"overall"},{"word":"pacific"},{"word":"package"},
+{"word":"painted"},{"word":"parking"},{"word":"partial"},{"word":"partner"},
+{"word":"passage"},{"word":"passing"},{"word":"passion"},{"word":"passive"},
+{"word":"patient"},{"word":"pattern"},{"word":"payable"},{"word":"payment"},
+{"word":"penalty"},{"word":"pending"},{"word":"pension"},{"word":"percent"},
+{"word":"perfect"},{"word":"perform"},{"word":"perhaps"},{"word":"phoenix"},
+{"word":"picking"},{"word":"picture"},{"word":"pioneer"},{"word":"plastic"},
+{"word":"pointed"},{"word":"popular"},{"word":"portion"},{"word":"poverty"},
+{"word":"precise"},{"word":"predict"},{"word":"premier"},{"word":"premium"},
+{"word":"prepare"},{"word":"present"},{"word":"prevent"},{"word":"primary"},
+{"word":"printer"},{"word":"privacy"},{"word":"private"},{"word":"problem"},
+{"word":"proceed"},{"word":"process"},{"word":"produce"},{"word":"product"},
+{"word":"profile"},{"word":"program"},{"word":"project"},{"word":"promise"},
+{"word":"promote"},{"word":"protect"},{"word":"protein"},{"word":"protest"},
+{"word":"provide"},{"word":"publish"},{"word":"purpose"},{"word":"pushing"},
+{"word":"qualify"},{"word":"quality"},{"word":"quarter"},{"word":"radical"},
+{"word":"railway"},{"word":"readily"},{"word":"Reading"},{"word":"reality"},
+{"word":"realize"},{"word":"receipt"},{"word":"receive"},{"word":"recover"},
+{"word":"reflect"},{"word":"regular"},{"word":"related"},{"word":"release"},
+{"word":"request"},{"word":"require"},{"word":"reserve"},{"word":"resolve"},
+{"word":"respect"},{"word":"respond"},{"word":"restore"},{"word":"retired"},
+{"word":"revenue"},{"word":"reverse"},{"word":"rollout"},{"word":"routine"},
+{"word":"running"},{"word":"satisfy"},{"word":"science"},{"word":"section"},
+{"word":"segment"},{"word":"serious"},{"word":"service"},{"word":"serving"},
+{"word":"session"},{"word":"setting"},{"word":"seventh"},{"word":"several"},
+{"word":"shortly"},{"word":"showing"},{"word":"silence"},{"word":"silicon"},
+{"word":"similar"},{"word":"sitting"},{"word":"sixteen"},{"word":"skilled"},
+{"word":"smoking"},{"word":"society"},{"word":"somehow"},{"word":"someone"},
+{"word":"speaker"},{"word":"special"},{"word":"species"},{"word":"sponsor"},
+{"word":"station"},{"word":"storage"},{"word":"strange"},{"word":"stretch"},
+{"word":"student"},{"word":"studied"},{"word":"subject"},{"word":"succeed"},
+{"word":"success"},{"word":"suggest"},{"word":"summary"},{"word":"support"},
+{"word":"suppose"},{"word":"supreme"},{"word":"surface"},{"word":"surgery"},
+{"word":"surplus"},{"word":"survive"},{"word":"suspect"},{"word":"sustain"},
+{"word":"teacher"},{"word":"telecom"},{"word":"telling"},{"word":"tension"},
+{"word":"theatre"},{"word":"therapy"},{"word":"thereby"},{"word":"thought"},
+{"word":"through"},{"word":"tonight"},{"word":"totally"},{"word":"touched"},
+{"word":"towards"},{"word":"traffic"},{"word":"trouble"},{"word":"turning"},
+{"word":"typical"},{"word":"uniform"},{"word":"unknown"},{"word":"unusual"},
+{"word":"upgrade"},{"word":"upscale"},{"word":"utility"},{"word":"variety"},
+{"word":"various"},{"word":"vehicle"},{"word":"venture"},{"word":"version"},
+{"word":"veteran"},{"word":"victory"},{"word":"viewing"},{"word":"village"},
+{"word":"violent"},{"word":"virtual"},{"word":"visible"},{"word":"waiting"},
+{"word":"walking"},{"word":"wanting"},{"word":"warning"},{"word":"warrant"},
+{"word":"wearing"},{"word":"weather"},{"word":"webcast"},{"word":"website"},
+{"word":"wedding"},{"word":"weekend"},{"word":"welcome"},{"word":"welfare"},
+{"word":"western"},{"word":"whereas"},{"word":"whereby"},{"word":"whether"},
+{"word":"willing"},{"word":"winning"},{"word":"without"},{"word":"witness"},
+{"word":"working"},{"word":"writing"},{"word":"written\""}]
