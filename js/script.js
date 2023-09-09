@@ -96,7 +96,7 @@ const winGame = () => {
 }
 
 const initGame = () => {
-    initTimer(45);
+    initTimer(30);
     let randomObj = words[Math.floor(Math.random() * words.length)];
     let wordArray = randomObj.word.split("");
     for (let i = wordArray.length - 1; i > 0; i--) {
@@ -157,12 +157,14 @@ const checkWord = () => {
     }
     else
     {
-    modal.style.display = "block";
-    modalContent.classList.remove("modal-wrong");
-    modalContent.classList.add("modal-correct");
-    modalText.innerHTML = `<br>Congrats! <b>${correctWord.toUpperCase()}</b> is the correct word`;
-    score++;
-    hintButton();
+        modal.style.display = "block";
+        modalContent.classList.remove("modal-wrong");
+        modalContent.classList.add("modal-correct");
+        modalText.innerHTML = `<br>Congrats! <b>${correctWord.toUpperCase()}</b> is the correct word`;
+        score++;
+        if(displayed==1){
+            hintButton();
+        }
     }
   
     initGame();

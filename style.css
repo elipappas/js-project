@@ -16,7 +16,7 @@ body{
 .container{
     width: 440px;
     border-radius: 7px;
-    background: #fff;
+    background: #d7d9d7;
     box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
 .container h2{
@@ -34,7 +34,7 @@ body{
 .startBtn{
     border: none;
     outline: none;
-    color: #fff;
+    color: #d7d9d7;
     cursor: pointer;
     margin: 15px;
     padding: 10px 0;
@@ -84,10 +84,10 @@ body{
     box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
 }
 .content input::placeholder{
-    color: #aaa;
+    color: #d7d9d7;
 }
 .content input:focus::placeholder{
-    color: #bfbfbf;
+    color: #d7d9d7;
 }
 .content .buttons{
     display: flex;
@@ -97,7 +97,7 @@ body{
 .buttons button{
     border: none;
     outline: none;
-    color: #fff;
+    color: #d7d9d7;
     cursor: pointer;
     padding: 15px 0;
     font-size: 17px;
@@ -123,10 +123,10 @@ body{
 .hint{
   border: none;
   outline: none;
-  color: #FFF;
+  color: #d7d9d7;
   cursor: pointer;
   padding: 8px 0;
-  background-color: #FFBF00;
+  background-color: #dd7973;
   font-size: 16px;
   border-radius: 5px;
   width: 100%;
@@ -169,7 +169,7 @@ body{
   
   /* The Close Button */
   .close {
-    color: #aaaaaa;
+    color: #d7d9d7;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -185,7 +185,8 @@ body{
   .score-area {
     padding-top: 15px;
     font-size: 18px;
-    color: black;
+    color: #1C1C1E;
+    font-weight: bold;
   }
   
   .score {
