@@ -1,10 +1,10 @@
 const wordText = document.querySelector(".word"),
-// hintText = document.querySelector(".hint span"),
+hintText = document.querySelector(".hint span"),
 timeText = document.querySelector(".container h2"),
 inputField = document.querySelector("input"),
 refreshBtn = document.querySelector(".refresh-word"),
 checkBtn = document.querySelector(".check-word"),
-// changeTextBtn = document.querySelector(".hint");
+changeTextBtn = document.querySelector(".hint");
 contentBox = document.querySelector(".container .content");
 startArea = document.querySelector(".startArea");
 scoreArea = document.querySelector(".score");
@@ -23,6 +23,30 @@ let correctWord, timer;
 let score = 0; 
 let displayed = 0;
 
+function getDef(WORD) {
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${WORD}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Check if the API response contains a definition
+            if (Array.isArray(data) && data.length > 0 && data[0].meanings) {
+                const definition = data[0].meanings[0].definitions[0].definition;
+                hintText.innerText = definition;
+            } else {
+                // Handle the case when no definition is found
+                hintText.innerText = "Definition not found";
+            }
+        })
+        .catch(error => {
+            // Handle any errors that occur during the API call
+            console.error("Error fetching definition:", error);
+            hintText.innerText = "Failed to fetch definition";
+        });
+}
 
 
 const initTimer = maxTime => {
@@ -42,7 +66,7 @@ const initTimer = maxTime => {
 const start = () => {
     contentBox.style.display = "block";
     startArea.style.display = "none";
-initGame(); 
+    initGame(); 
 }
 
 
@@ -72,7 +96,7 @@ const winGame = () => {
 }
 
 const initGame = () => {
-    initTimer(30);
+    initTimer(45);
     let randomObj = words[Math.floor(Math.random() * words.length)];
     let wordArray = randomObj.word.split("");
     for (let i = wordArray.length - 1; i > 0; i--) {
@@ -81,21 +105,21 @@ const initGame = () => {
     }
     
     wordText.innerText = wordArray.join("");
-    // Text.innerText = randomObj.hint;
-    correctWord = randomObj.word.toLowerCase();;
+    correctWord = randomObj.word.toLowerCase();
     inputField.value = "";
     inputField.setAttribute("maxlength", correctWord.length);
     scoreArea.innerHTML = score;
 
-    if(score > 9)
-    {
+    // Call getDef with the current word
+    getDef(correctWord);
+
+    if (score > 9) {
         winGame();
     }
 
 }
 
-
-/* changeTextBtn.addEventListener("click", function(){
+changeTextBtn.addEventListener("click", function(){
     hintButton();
 })
 
@@ -110,7 +134,7 @@ const hintButton = () => {
         T.style.display="none";
         displayed = 0;
     }  
-} */
+}
 
 const checkWord = () => {
     let userWord = inputField.value.toLowerCase();
@@ -138,7 +162,7 @@ const checkWord = () => {
     modalContent.classList.add("modal-correct");
     modalText.innerHTML = `<br>Congrats! <b>${correctWord.toUpperCase()}</b> is the correct word`;
     score++;
-    //hintButton()
+    hintButton();
     }
   
     initGame();
@@ -149,9 +173,6 @@ const checkWord = () => {
 function closeModal() {
     modal.style.display = 'none';
 }
-
-
-
 
 refreshBtn.addEventListener("click", initGame);
 checkBtn.addEventListener("click", checkWord);
